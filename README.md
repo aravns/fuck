@@ -1,4 +1,4 @@
 # fuck
 
 
-*** https://aravns.github.io/fuck/ ***
+**https://aravns.github.io/fuck/**

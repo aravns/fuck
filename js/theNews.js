@@ -1,1 +1,1 @@
-console.log("fack you FARIS")
+console.log("fack you tabot")

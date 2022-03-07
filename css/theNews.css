@@ -15,6 +15,10 @@
     text-decoration: none;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
     background: radial-gradient(ellipse at bottom, #192E47 0%, #030617 100%);
     background-attachment: fixed;
@@ -31,10 +35,10 @@ section {
 .sec {
     position: relative;
     margin: 100px auto;
-    min-height: 100vh;
+    min-height: 1000px;
     width: 100%;
     box-shadow: 0 0 3rem 10px rgba(0, 0, 0, 0.993);
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1;
     background: inherit;
     overflow: hidden;
@@ -48,7 +52,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: inset 0 0 2000px #ffffff62;
+    box-shadow: inset 0 0 2000px #ffffff23;
     filter: blur(20px);
     /* margin: -20px; */
 }
@@ -56,14 +60,97 @@ section {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #ffffff75;
+    background: #ffffff49;
     opacity: .2;
 }
 
-.text {
-    position: relative;
+.main {
+    position: absolute;
     z-index: 10;
-    margin: 100px 0;
-    min-height: 100vh;
+    min-height: 1000px;
     width: 100%;
+    top: 2px;
+    padding: 100px 100px; 
+
+    display: flex;
+    flex-direction: column;
+}
+
+.main h1 {
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 1000;
+}
+.main main div {
+    width: 80%;
+    min-height: 100%;
+}
+.main main {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.main main .d-1 {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main main .d-1 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: example 2s linear infinite alternate;
+    box-shadow: 13px 20px 20px 0px #000000db;
+}
+
+@keyframes example {
+    0% {
+        transform: translate(0, -60px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -60px);
+    }
+}
+
+.main main .d-2 p {
+    font-size: 2rem;
+    color: #a5a5a5;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        padding: 50px;
+    }
+    .main main {
+        flex-direction: column;
+    }
+    .main main div {
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        padding: 10px;
+    }
+    :root {
+        --center: 95%;
+    }
+    .main main .d-1 {
+        width: 100%;
+        justify-content: center;
+    }
 }
